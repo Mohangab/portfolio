@@ -1,0 +1,47 @@
+:root{--bg:#0f1420;--fg:#e6e9f0;--muted:#9aa3b5;--card:#171e2e;--line:#263049;--accent:#6e8eff;--accent-fg:#fff}
+@media (prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#fafbfd;--fg:#141a26;--muted:#5b6475;--card:#fff;--line:#e3e7ef;--accent:#3d63e6}}
+[data-theme=light]{--bg:#fafbfd;--fg:#141a26;--muted:#5b6475;--card:#fff;--line:#e3e7ef;--accent:#3d63e6}
+[data-theme=dark]{--bg:#0f1420;--fg:#e6e9f0;--muted:#9aa3b5;--card:#171e2e;--line:#263049;--accent:#6e8eff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--card);padding:.5rem 1rem;z-index:99}
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:1rem;height:3.5rem}
+.brand{font-weight:800;color:var(--fg);letter-spacing:.05em}
+.nav nav{flex:1;overflow-x:auto;scrollbar-width:none}.nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;white-space:nowrap}
+.nav nav a{color:var(--muted);font-size:.92rem}.nav nav a:hover{color:var(--fg)}
+.theme{background:none;border:1px solid var(--line);color:var(--fg);border-radius:8px;width:2.2rem;height:2.2rem;cursor:pointer;font-size:1rem}
+section{padding:3.5rem 1.25rem}
+.hero{padding-top:5rem;padding-bottom:3rem}
+.eyebrow{color:var(--accent);font-weight:600;font-size:.9rem;margin:0}
+h1{font-size:clamp(2.2rem,7vw,3.6rem);line-height:1.1;margin:.4rem 0;letter-spacing:-.02em}
+h2{font-size:1.6rem;margin:0 0 1.25rem;letter-spacing:-.01em}
+h3{font-size:1.08rem;margin:0}
+.lead{font-size:clamp(1.05rem,2.6vw,1.25rem);color:var(--muted);margin:.25rem 0 1.5rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:10px;border:1px solid var(--line);color:var(--fg);font-weight:600}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.links{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none;padding:0;margin:1.5rem 0 0}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:1.5rem}
+@media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem}
+.stats strong{display:block;font-size:1.5rem;color:var(--accent)}.stats span{color:var(--muted);font-size:.85rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.card ul{padding-left:1.1rem;margin:.75rem 0 0}.card li{margin:.35rem 0}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1rem;align-items:baseline}
+.muted{color:var(--muted);font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+.chips li{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.35rem .85rem;font-size:.92rem}
+.grid{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+.grid p{margin:.5rem 0 0}.tech{color:var(--muted);font-size:.85rem}
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.timeline li{padding:0 0 1.25rem 1.25rem;position:relative}
+.timeline li::before{content:"";position:absolute;left:-7px;top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.timeline p{margin:.15rem 0}
+.foot{border-top:1px solid var(--line);padding:1.5rem 1.25rem;color:var(--muted);font-size:.9rem;text-align:center}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
